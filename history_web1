@@ -1,0 +1,7 @@
+consul agent -data-dir /tmp/consul -config-dir /etc/consul.d -bind 172.20.20.20 > log
+consul join 172.20.20.10
+python -m SimpleHTTPServer > log 2>&1
+consul reload
+curl localhost:8500/v1/catalog/service/web
+dig @127.0.0.1 -p 8600 web.service.consul
+dig @127.0.0.1 -p 8600 web1.web.service.consul SRV

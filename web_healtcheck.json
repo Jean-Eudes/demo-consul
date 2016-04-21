@@ -1,0 +1,10 @@
+{"service":
+    {"name": "web",
+     "tags": ["web1"],
+     "port": 8000,
+     "check": {
+        "script": "curl -f -X GET http://localhost:8000",
+        "interval": "5s"}
+    }
+}
+

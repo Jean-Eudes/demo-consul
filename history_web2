@@ -1,0 +1,2 @@
+consul agent -data-dir /tmp/consul -config-dir /etc/consul.d -bind 172.20.20.21 > log.txt 
+consul join 172.20.20.10
